@@ -1,0 +1,4 @@
+[2023-09-15 14:56:08] sql.INFO: [1189.42] select `column_key` as `column_key`, `column_name` as `column_name`, `data_type` as `data_type`, `column_comment` as `column_comment`, `extra` as `extra`, `column_type` as `column_type` from information_schema.columns where `table_schema` = 'db-yourflow' and `table_name` = 'user' order by ORDINAL_POSITION [] []
+[2023-09-15 15:00:38] sql.INFO: [1371.33] select * from `users` where `id` = '2' limit 1 [] []
+[2023-09-15 15:00:48] sql.INFO: [227.63] select * from `users` where `id` = '2' limit 1 [] []
+[2023-09-15 15:01:15] sql.INFO: [228.01] select * from `users` where `id` = '2' limit 1 [] []

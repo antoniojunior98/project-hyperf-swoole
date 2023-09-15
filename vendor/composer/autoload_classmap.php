@@ -8,10 +8,12 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Controller\\AbstractController' => $baseDir . '/app/Controller/AbstractController.php',
     'App\\Controller\\IndexController' => $baseDir . '/app/Controller/IndexController.php',
+    'App\\Controller\\UserController' => $baseDir . '/app/Controller/UserController.php',
     'App\\Exception\\Handler\\AppExceptionHandler' => $baseDir . '/app/Exception/Handler/AppExceptionHandler.php',
     'App\\Listener\\DbQueryExecutedListener' => $baseDir . '/app/Listener/DbQueryExecutedListener.php',
     'App\\Listener\\ResumeExitCoordinatorListener' => $baseDir . '/app/Listener/ResumeExitCoordinatorListener.php',
     'App\\Model\\Model' => $baseDir . '/app/Model/Model.php',
+    'App\\Model\\User' => $baseDir . '/app/Model/User.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'CURLStringFile' => $vendorDir . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
     'Carbon\\AbstractTranslator' => $vendorDir . '/nesbot/carbon/src/Carbon/AbstractTranslator.php',

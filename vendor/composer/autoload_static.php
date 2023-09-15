@@ -531,10 +531,12 @@ class ComposerStaticInit74aa6ab95b043ef60571fede839cddee
     public static $classMap = array (
         'App\\Controller\\AbstractController' => __DIR__ . '/../..' . '/app/Controller/AbstractController.php',
         'App\\Controller\\IndexController' => __DIR__ . '/../..' . '/app/Controller/IndexController.php',
+        'App\\Controller\\UserController' => __DIR__ . '/../..' . '/app/Controller/UserController.php',
         'App\\Exception\\Handler\\AppExceptionHandler' => __DIR__ . '/../..' . '/app/Exception/Handler/AppExceptionHandler.php',
         'App\\Listener\\DbQueryExecutedListener' => __DIR__ . '/../..' . '/app/Listener/DbQueryExecutedListener.php',
         'App\\Listener\\ResumeExitCoordinatorListener' => __DIR__ . '/../..' . '/app/Listener/ResumeExitCoordinatorListener.php',
         'App\\Model\\Model' => __DIR__ . '/../..' . '/app/Model/Model.php',
+        'App\\Model\\User' => __DIR__ . '/../..' . '/app/Model/User.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'CURLStringFile' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
         'Carbon\\AbstractTranslator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/AbstractTranslator.php',

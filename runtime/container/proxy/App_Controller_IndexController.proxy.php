@@ -24,22 +24,8 @@ class IndexController extends AbstractController
     }
     public function index()
     {
-        $user = $this->request->input('user', 'Hyperf');
+        //$user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
-        $time_start = microtime(true);
-        $parallel = new \Hyperf\Coroutine\Parallel();
-        $parallel->add(function () {
-            sleep(2);
-            //return \Hyperf\Coroutine\Coroutine::id();
-        });
-        $parallel->add(function () {
-            sleep(2);
-            //return \Hyperf\Coroutine\Coroutine::id();
-        });
-        // $result is [1, 2]
-        $result = $parallel->wait();
-        $time_end = microtime(true);
-        $time = $time_end - $time_start;
-        return ['method' => $method, 'message' => $time . " segundo(s)."];
+        return ['method' => $method, 'message' => " segundo(s)."];
     }
 }
