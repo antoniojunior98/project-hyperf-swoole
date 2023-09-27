@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd8ca19b672dd41592f1135da2832757",
+    "content-hash": "a30a03ec82ab4017bbbedaa9a0456956",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2490,6 +2490,70 @@
             "time": "2023-08-25T07:31:42+00:00"
         },
         {
+            "name": "hyperf/socketio-server",
+            "version": "v3.0.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/socketio-server.git",
+                "reference": "134006c553c8d591c889183d55fbe4745d300cc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/socketio-server/zipball/134006c553c8d591c889183d55fbe4745d300cc3",
+                "reference": "134006c553c8d591c889183d55fbe4745d300cc3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-redis": "*",
+                "ext-swoole": ">=4.4",
+                "hyperf/codec": "~3.0.0",
+                "hyperf/collection": "~3.0.0",
+                "hyperf/di": "~3.0.0",
+                "hyperf/redis": "~3.0.0",
+                "hyperf/websocket-server": "~3.0.0",
+                "php": ">=8.0",
+                "psr/container": "^1.0|^2.0"
+            },
+            "conflict": {
+                "mix/redis-subscriber": "<3.0.4"
+            },
+            "suggest": {
+                "hyperf/command": "Required to use RemoveRedisGarbage command",
+                "hyperf/nsq": "Required to use RedisNsqAdapter",
+                "hyperf/session": "Required to use session",
+                "mix/redis-subscriber": "Suggest to use RedisAdapter (^3.0.4)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\SocketIOServer\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\SocketIOServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Socket.io implementation for hyperf",
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/socketio-server/issues",
+                "source": "https://github.com/hyperf/socketio-server/tree/v3.0.25"
+            },
+            "time": "2023-06-14T06:36:06+00:00"
+        },
+        {
             "name": "hyperf/stringable",
             "version": "v3.0.31",
             "source": {
@@ -2725,6 +2789,65 @@
                 "php",
                 "swoole",
                 "utils"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "time": "2023-04-26T03:02:31+00:00"
+        },
+        {
+            "name": "hyperf/websocket-server",
+            "version": "v3.0.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/websocket-server.git",
+                "reference": "5d8bd4d3ac08e5fe299a7c08e55f1e05a2ff148c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/websocket-server/zipball/5d8bd4d3ac08e5fe299a7c08e55f1e05a2ff148c",
+                "reference": "5d8bd4d3ac08e5fe299a7c08e55f1e05a2ff148c",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/collection": "~3.0.0",
+                "hyperf/contract": "~3.0.0",
+                "hyperf/exception-handler": "~3.0.0",
+                "hyperf/http-server": "~3.0.0",
+                "hyperf/support": "~3.0.0",
+                "hyperf/utils": "~3.0.0",
+                "php": ">=8.0",
+                "psr/container": "^1.0|^2.0",
+                "psr/event-dispatcher": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\WebSocketServer\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\WebSocketServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A websocket server library for Hyperf.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "hyperf",
+                "php",
+                "swoole",
+                "websocket"
             ],
             "support": {
                 "docs": "https://hyperf.wiki",

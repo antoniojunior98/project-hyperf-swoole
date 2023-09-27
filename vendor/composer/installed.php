@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'hyperf/hyperf-skeleton',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '0f2eddc3aed5532893f73ff6634fd180485fb0a8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -347,9 +347,9 @@
             'dev_requirement' => false,
         ),
         'hyperf/hyperf-skeleton' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '0f2eddc3aed5532893f73ff6634fd180485fb0a8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -445,6 +445,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'hyperf/socketio-server' => array(
+            'pretty_version' => 'v3.0.25',
+            'version' => '3.0.25.0',
+            'reference' => '134006c553c8d591c889183d55fbe4745d300cc3',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hyperf/socketio-server',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'hyperf/stringable' => array(
             'pretty_version' => 'v3.0.31',
             'version' => '3.0.31.0',
@@ -498,6 +507,15 @@
             'install_path' => __DIR__ . '/../hyperf/watcher',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'hyperf/websocket-server' => array(
+            'pretty_version' => 'v3.0.18',
+            'version' => '3.0.18.0',
+            'reference' => '5d8bd4d3ac08e5fe299a7c08e55f1e05a2ff148c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../hyperf/websocket-server',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,

@@ -11,10 +11,28 @@ services:
       - ./:/app
     ports:
       - 9501:9501
+      - 9502:9502
     depends_on:
       - hyperf-skeleton-mariadb
       - hyperf-skeleton-redis
+    networks:
+      - project_swoole
 
+  hyperf-skeleton-nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+        - 443:443
+    depends_on:
+        - hyperf-skeleton
+    volumes: 
+        - /www/wwwroot
+        - ./docker/nginx/:/etc/nginx/conf.d/
+        - ./logs:/var/log/nginx
+        - ./ssl_certificate:/ssl_certificate
+    networks:
+      - project_swoole
+    
   hyperf-skeleton-mariadb:
     container_name: hyperf-skeleton-mariadb
     image: mariadb:latest
@@ -25,9 +43,18 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "secret"
       MYSQL_DATABASE: "hyperf-skeleton"
+    networks:
+      - project_swoole
 
   hyperf-skeleton-redis:
     container_name: hyperf-skeleton-redis
     image: redis:latest
     ports:
       - 6379:6379
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    networks:
+      - project_swoole
+      
+networks:
+  project_swoole:
+    driver: bridge

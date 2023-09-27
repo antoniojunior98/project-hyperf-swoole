@@ -11,6 +11,8 @@ declare (strict_types=1);
  */
 namespace App\Controller;
 
+use Hyperf\SocketIOServer\Socket;
+use Socket as GlobalSocket;
 class IndexController extends AbstractController
 {
     use \Hyperf\Di\Aop\ProxyTrait;
@@ -25,7 +27,9 @@ class IndexController extends AbstractController
     public function index()
     {
         //$user = $this->request->input('user', 'Hyperf');
-        $method = $this->request->getMethod();
-        return ['method' => $method, 'message' => " segundo(s)."];
+        //$method = $this->request->getMethod();
+        $socket = \Hyperf\Utils\ApplicationContext::getContainer()->get(\Hyperf\SocketIOServer\SocketIO::class);
+        $socket->to('room1')->emit('event', "enviado pelo index para sala 1");
+        return $this->response->json('teste')->withStatus(200);
     }
 }
