@@ -22,6 +22,7 @@ class IndexController extends AbstractController
     
         $socket = \Hyperf\Utils\ApplicationContext::getContainer()->get(\Hyperf\SocketIOServer\SocketIO::class);
         $socket->to('room1')->emit('event', "enviado pelo index para sala 1");
+       
       
         return $this->response->json('teste')->withStatus(200);
     }
